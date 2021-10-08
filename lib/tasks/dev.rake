@@ -5,8 +5,8 @@ namespace :dev do
       spinner = TTY::Spinner.new("[:spinner] Loading...")
       spinner.auto_spin
       %x(rails db:drop db:create db:migrate db:seed)
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
       spinner.success('(concluido com sucesso)')
 
     else 
@@ -20,17 +20,20 @@ task add_coins: :environment do
     {
       description: "bitcoin",
       acronym: "BTC",
-      url_image: "https://logospng.org/download/bitcoin/logo-bitcoin-2048.png"
+      url_image: "https://logospng.org/download/bitcoin/logo-bitcoin-2048.png",
+      mining_type: MiningType.find_by(acronym: 'PoW')
     },
     {
       description: "Etherium",
       acronym: "ETH",
-      url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png/600px-ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+      url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png/600px-ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+      mining_type: MiningType.all.sample
     },
     {
       description: "Dash",
       acronym: "DASH",
-      url_image: "https://www.clipartmax.com/png/middle/96-966205_dash-logo-vector-eps-free-download-logo-icons-clipart-dash-coin-logo.png"
+      url_image: "https://www.clipartmax.com/png/middle/96-966205_dash-logo-vector-eps-free-download-logo-icons-clipart-dash-coin-logo.png",
+      mining_type: MiningType.all.sample
     }
   ]
   coins.each do |coin|

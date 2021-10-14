@@ -1,7 +1,8 @@
-<p> <%= link_to 'Português', root_path(locale: 'pt-BR')%> </p>
-<p> <%= link_to 'English', '/?locale=en'%> </p>
-<h1>Seja Bem-Vindo</h1>
-<p> Data: <%= I18n.l(Date.today) %> </p>
-<p>o idioma usado nessa aplicacao é: <%=t('actual_locale')%> </p>
-<%= t('abc')%>
-<%= render "menu"%>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem-Vindo!</h1>
+  <p class="lead">Este é o Crypto Wallet, um app para você cadastrar e acompanhar suas criptomoedas</p>
+  <hr class="my-4">
+  <p>Para começar, selecione uma das opções abaixo:</p>
+   <%= render "menu"%>
+</div>
+ 

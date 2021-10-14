@@ -11,8 +11,16 @@
   </head>
 
   <body>
-  <h1>Cabeçalho</h1>
+  <div class="container-fluid">
+    <ul class="nav justify-content-end">
+    <li class="nav-item">
+     <%= link_to 'Português', root_path(locale: 'pt-BR'), class:"nav-link"%> 
+    </li>
+    <li class="nav-item">
+     <%= link_to 'English', '/?locale=en', class:"nav-link"%> 
+    </li>
+  </ul>
     <%= yield %>
-  <h1>Rodapé</h1>
+  </div>
   </body>
 </html>

@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong> <%=t('descricao')%> </strong>
   <%= @mining_type.description %>
 </p>
 
 <p>
-  <strong>Acronym:</strong>
+  <strong><%=t('acronym')%></strong>
   <%= @mining_type.acronym %>
 </p>
 
-<%= link_to 'Edit', edit_mining_type_path(@mining_type) %> |
-<%= link_to 'Back', mining_types_path %>
+<%= link_to t('editar'), edit_mining_type_path(@mining_type) %> |
+<%= link_to t('voltar'), mining_types_path %>

@@ -30,8 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  actual_locale: "English"
+  current_locale: "English"
   hello: "Hello world"
+  welcome: "Welcome!"
+  moedas: "Coins"
+  nova_moeda: "New Coin"
+  novo_tipo_de_moeda: "New Mining Type"
+  tipos_de_mineracao: "Types of Mining"
+  welcome_message: "This is Crypto Wallet, an app for you to register and track your cryptocurrencies"
+  menu_message: "To get started, select one of the options below:"
   links:
     edit: "Edit"
     show: "Show"

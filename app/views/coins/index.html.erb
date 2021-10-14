@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Moedas</h1>
+<h1> <%=t('moedas')%> </h1>
 <p> Data: <%= date_br(Date.today)%> </p>
 
 <table class="table table-striped table-hover">
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Coin', new_coin_path %>
+<%= link_to t('nova_moeda'), new_coin_path, class: "btn btn-primary"%>

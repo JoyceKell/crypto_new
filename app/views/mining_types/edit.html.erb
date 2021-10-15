@@ -2,5 +2,13 @@
 
 <%= render 'form', mining_type: @mining_type %>
 
-<%= link_to t('mostrar'), @mining_type %> |
-<%= link_to t('voltar'), mining_types_path %>
+<%= link_to t('mostrar'), @mining_type, class:"btn btn-primary" %> |
+<%= link_to t('voltar'), mining_types_path, class:"btn btn-primary" %>
+
+
+new html do ining tyes
+	<h1><%=t('nova_moeda_tipo')%></h1>
+
+<%= render 'form', mining_type: @mining_type %>
+
+<%= link_to t('voltar'), mining_types_path, class:"btn btn-primary" %>
